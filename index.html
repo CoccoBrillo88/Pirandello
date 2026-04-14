@@ -2,86 +2,121 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sito Pirandello</title>
+    <title>Luigi Pirandello</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <main class="layout-container">
-        
-        <section class="top-section">
-            <div class="intro-box">
-                <h2>Introduzione Pirandello</h2>
-                <p>
-                    Luigi Pirandello (nato ad Agrigento il 28 giugno 1867 e morto a Roma il 10 dicembre 1936) 
-                    è stato un celebre drammaturgo, scrittore e poeta italiano. Insignito del Premio Nobel per la letteratura nel 1934, 
-                    è considerato uno dei più grandi innovatori del teatro e della narrativa del Novecento.
-                </p>
-            </div>
-            <div class="image-box">
-                <img src="Luigi-Pirandello-768x1024.jpg" alt="Ritratto di Luigi Pirandello">
-            </div>
-        </section>
+    <!-- Sfondo -->
+    <div class="background"></div>
 
-        <section class="bottom-section">
-            
-            <div class="buttons-row">
-                <button class="oval-btn" onclick="showColumn(1)">Visione & Incomunicabilità</button>
-                <button class="oval-btn" onclick="showColumn(2)">Fratture & Umorismo</button>
-                <button class="oval-btn" onclick="showColumn(3)">Il fu Mattia Pascal</button>
+    <!-- Contenuto principale -->
+    <div class="container">
+
+        <h1>Luigi Pirandello</h1>
+
+        <p class="intro">
+            Luigi Pirandello nasce il 28 giugno 1867 ad Agrigento, in Sicilia.
+            È stato uno dei più importanti scrittori e drammaturghi italiani,
+            premio Nobel per la letteratura nel 1934. La sua opera esplora la crisi
+            dell’identità, il contrasto tra realtà e apparenza e la frammentazione dell’io.
+        </p>
+
+        <!-- Rettangoli -->
+        <div class="cards">
+
+            <div class="card" onclick="toggleSection('sezione1')">
+                Visione del mondo e Incomunicabilità
             </div>
 
-            <div class="columns-row">
-                
-                <div class="content-col" id="col1">
-                    <div class="inner-content">
-                        <h3>Visione del mondo e incomunicabilità</h3>
-                        <img src="Copilot_20260410_205900.jpg" alt="Immagine Maschere">
-                        <ul>
-                            <li>La filosofia di pirandello si basa sulla visione vitalistica di Bergson affermando che la vita è un divenire costante come un flusso perenne e chi si sottrae a ciò è destinato a una morte interiore[cite: 1].</li>
-                            <li>L'incomunicabilità nasce dalla perdita dell'uomo nelle certezze naturali, sostituite da uno spazio innaturale, affermando che la realtà è multiforme e quindi soggettiva[cite: 1].</li>
-                            <li>Pirandello afferma che la famiglia è il primo luogo dove non ci si può sentire se stessi, oppressivo e pieno di tensioni, odi, rancori, menzogne ecc.[cite: 2].</li>
-                            <li>Parlando successivamente del lavoro frustrante e monotono che priva l'uomo di personalità passando infine alla società borghese (amici, scuola, ragazza) che ci costringono a indossare una maschera che definisce chi siamo anche se non lo vogliamo[cite: 3].</li>
-                            <li>A questo punto l'uomo comincia a vedersi come uno (per sé), nessuno (visione personale interna), centomila (come veniamo visti dagli altri, “grazie” a tutte le maschere che ci vengono messe addosso)[cite: 4].</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="content-col" id="col2">
-                    <div class="inner-content">
-                        <h3>Fratture personali e umorismo</h3>
-                        <img src="Luigi-Pirandello-768x1024.jpg" alt="Immagine Pirandello">
-                        <ul>
-                            <li>Questa visione del mondo e la filosofia di Pirandello sono state condizionate da 2 fratture personali[cite: 5].</li>
-                            <li>La frattura economica e familiare dovuta dall'esplosione della miniera di zolfo che possedeva e dai gravi disturbi mentali della moglie che sono sfociati in pazzia arrivando ad aggredire il marito e i figli[cite: 5].</li>
-                            <li>La frattura filosofica e identitaria dovuta dalla perdita di fiducia nelle certezze positiviste e risorgimentali con le quali era cresciuto[cite: 6].</li>
-                            <li>Pirandello nella sua opera “L'umorismo” sviluppa l'avvertimento del contrario e il sentimento del contrario[cite: 7]. L'avvertimento del contrario consiste nel avvertire qualcosa che è diverso dal normale[cite: 7]. Il sentimento del contrario è quando interiorizziamo il dolore di un'altra persona[cite: 8].</li>
-                            <li>Pirandello propone un ottimo esempio per spiegare tutti e due ovvero per il primo usa come esempio una donna anziana che si veste come se fosse ancora giovane[cite: 9]. A prima vista la scena fa sorridere: è il cosiddetto avvertimento del contrario, ossia la percezione immediata di un contrasto tra come dovrebbe essere e tra ciò che è[cite: 10].</li>
-                            <li>Questo meccanismo costituisce la base del comico. Per cogliere il sentimento del contrario bisogna osservare più a fondo chiedendosi perchè quella donna si comporta così?[cite: 11]. Forse perché è stata abbandonata dal marito e, nel disperato tentativo di riconquistarlo, cerca di assumere un’altra personalità?[cite: 12].</li>
-                            <li>In questo caso, dietro la comicità, si svela una verità dolorosa: la solitudine, la sofferenza, la perdita della propria identità[cite: 13]. La donna, nel tentativo di apparire diversa, diventa “nessuno”[cite: 14].</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="content-col" id="col3">
-                    <div class="inner-content">
-                        <h3>Il fu Mattia Pascal</h3>
-                        <ul>
-                            <li>Pubblicato a puntate nel 1904 sulla rivista italiana “Nuova Antologia” scritto di notte mentre l'autore vegliava sulla moglie la notte[cite: 14].</li>
-                            <li>La trama racconta di questo giovane ragazzo chiamato Mattia Pascal nato in una famiglia benestante che vede andare in rovina il proprio matrimonio per via dei furti di un disonesto amministratore, stressato dalla suocera e dalla perdita dell'unica figlia decide di andare a Montecarlo in cerca di fortuna[cite: 15].</li>
-                            <li>Vince un ingente somma al casinò e durante il viaggio di ritorno legge su un giornale che è stato trovato il cadavere di Mattia Pascal, coglie così l'occasione di farsi una nuova vita chiamandosi Adriano Meis e innamorandosi di un'altra donna, purtroppo non possedendo documenti che lo “identificassero” non poteva sposare la donna di cui si era innamorato e neanche denunciare il furto subito[cite: 16].</li>
-                            <li>Decide di simulare il suicidio di Adriano Meis e tornare a essere Mattia Pascal ma purtroppo si renderà conto che la sua ex moglie si è risposata, rassegnatosi va a vivere con la zia, lavorando in una biblioteca e vedremo che andrà a mettere dei fiori sulla sua tomba dicendo: “Io sono il fu Mattia Pascal” a chiunque vedendolo glielo chiede[cite: 17].</li>
-                            <li>In questo romanzo possiamo capire come senza una maschera che ci identifichi non possiamo fare nulla, amare, agire, difenderci ecc.[cite: 18].</li>
-                            <li>E possiamo notare anche il sentimento del contrario della poetica dell'umorismo tramite la fuga, il colpo di fortuna al casinò, il cambio d'identità e il finale[cite: 19]. Dietro tutte queste azioni troviamo una storia triste piena di brutti momenti che hanno portato il protagonista a compiere determinate azioni[cite: 20].</li>
-                        </ul>
-                        <img src="Mattia2.jpg" alt="Mappa concettuale Mattia Pascal">
-                    </div>
-                </div>
-
+            <div class="card" onclick="toggleSection('sezione2')">
+                Fratture personali e Umorismo
             </div>
-        </section>
-    </main>
+
+            <div class="card" onclick="toggleSection('sezione3')">
+                Il fu Mattia Pascal
+            </div>
+
+        </div>
+
+        <!-- Sezioni -->
+
+        <div id="sezione1" class="content">
+            <img src="Copilot_20260410_205900.png" alt="Maschera">
+
+            <h2>Visione del mondo</h2>
+            <p>
+                La filosofia di Pirandello si basa sulla visione vitalistica di Bergson:
+                la vita è un flusso continuo e chi si sottrae a questo movimento è destinato
+                a una morte interiore.
+            </p>
+
+            <h2>Incomunicabilità</h2>
+            <p>
+                La realtà è soggettiva e multiforme. L’uomo vive intrappolato in maschere
+                imposte dalla famiglia, dal lavoro e dalla società. Nasce così il concetto
+                di:
+            </p>
+            <ul>
+                <li>Uno (per sé)</li>
+                <li>Nessuno (identità interna)</li>
+                <li>Centomila (come ci vedono gli altri)</li>
+            </ul>
+        </div>
+
+        <div id="sezione2" class="content">
+            <img src="Luigi-Pirandello-768x1024.jpg" alt="Pirandello">
+
+            <h2>Fratture personali</h2>
+            <ul>
+                <li>
+                    Frattura economica e familiare: fallimento della miniera e malattia mentale della moglie.
+                </li>
+                <li>
+                    Frattura filosofica: perdita delle certezze positiviste.
+                </li>
+            </ul>
+
+            <h2>Poetica dell’umorismo</h2>
+            <p>
+                Pirandello distingue tra:
+            </p>
+            <ul>
+                <li><b>Avvertimento del contrario</b>: percezione del comico</li>
+                <li><b>Sentimento del contrario</b>: comprensione profonda del dolore</li>
+            </ul>
+
+            <p>
+                Dietro il comico si nasconde sempre una verità tragica.
+            </p>
+        </div>
+
+        <div id="sezione3" class="content">
+            <img src="Mattia2.png" alt="Mattia Pascal">
+
+            <h2>Il fu Mattia Pascal</h2>
+            <p>
+                Pubblicato nel 1904, racconta la storia di Mattia Pascal che,
+                creduto morto, assume una nuova identità: Adriano Meis.
+            </p>
+
+            <p>
+                Tuttavia, senza documenti non può vivere davvero: non può sposarsi,
+                né difendersi legalmente.
+            </p>
+
+            <p>
+                Torna alla sua identità originale, ma ormai è “fu”.
+                Il romanzo mostra che senza una “maschera sociale” non possiamo esistere.
+            </p>
+
+            <p>
+                Celebre frase finale:
+                <i>"Io sono il fu Mattia Pascal"</i>
+            </p>
+        </div>
+
+    </div>
 
     <script src="script.js"></script>
 </body>
