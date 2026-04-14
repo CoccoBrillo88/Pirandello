@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <title>Pirandello</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Pirandello</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-    <h1>Luigi Pirandello</h1>
-</header>
-
+<!-- HERO -->
 <section class="hero">
-    <img src="pirandello.png" class="fade-img">
+    <div class="overlay"></div>
 
-    <div class="intro">
+    <img src="pirandello.png" class="hero-img">
+
+    <div class="hero-text">
+        <h1>Luigi Pirandello</h1>
         <p>
             Luigi Pirandello nasce il 28 giugno 1867 ad Agrigento.
-            È uno dei più importanti scrittori italiani, premio Nobel nel 1934.
-            Le sue opere trattano la crisi dell’identità, le maschere sociali
-            e la frammentazione della realtà.
+            Premio Nobel per la letteratura nel 1934, è uno dei più grandi
+            autori italiani. Le sue opere analizzano la crisi dell’identità,
+            le maschere sociali e la relatività della realtà.
         </p>
     </div>
 </section>
 
-<section class="cards">
+<!-- CARDS -->
+<section class="cards hidden" id="cards">
 
     <a href="visione.html" class="card">
-        Visione del mondo e Incomunicabilità
+        Visione del mondo
     </a>
 
     <a href="umorismo.html" class="card">
-        Fratture personali e Umorismo
+        Umorismo e fratture
     </a>
 
     <a href="mattia.html" class="card">
@@ -40,5 +42,6 @@
 
 </section>
 
+<script src="script.js"></script>
 </body>
 </html>
