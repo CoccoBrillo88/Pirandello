@@ -1,0 +1,135 @@
+/* Importazione di un font leggibile e moderno */
+@import url('https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* Regole base e Sfondo con opacità al 60% */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    position: relative;
+    background-color: #F5F5DC; /* Beige */
+}
+
+/* Sfondo applicato con uno pseudo-elemento per gestire perfettamente l'opacità al 60% */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100vw; 
+    height: 100vh;
+    background-image: url('Luigi-Pirandello-768x1024.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.6; /* Sfondo a 60 di opacità */
+    z-index: -1;
+}
+
+/* Header - Introduzione */
+.intro-section {
+    background-color: rgba(255, 255, 255, 0.9); /* Bianco leggermente trasparente */
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 800px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-top: 5px solid #DAA520; /* Giallo oro */
+}
+
+.intro-section h1 {
+    font-family: 'Georgia', serif;
+    color: #B87333; /* Arancione rame */
+    margin-top: 0;
+}
+
+/* Contenitore principale */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* I 3 Rettangoli Cliccabili */
+.rectangles-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.rect-btn {
+    flex: 1;
+    background-color: #B87333; /* Arancione Rame */
+    color: #FFFFFF;
+    border: none;
+    padding: 20px 10px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.rect-btn:hover {
+    background-color: #DAA520; /* Giallo Oro */
+    transform: translateY(-3px);
+}
+
+/* Sezioni degli appunti */
+.content-section {
+    background-color: #F5F5DC; /* Beige */
+    border: 2px solid #DAA520; /* Bordo Giallo Oro */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    margin-bottom: 40px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.content-section.hidden {
+    display: none;
+}
+
+.content-section h2 {
+    font-family: 'Georgia', serif;
+    color: #B87333;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.content-section img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 25px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.content-section ul {
+    line-height: 1.8;
+    font-size: 16px;
+    padding-left: 20px;
+}
+
+.content-section ul li {
+    margin-bottom: 12px;
+}
+
+/* Animazione di entrata */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive design per schermi piccoli */
+@media (max-width: 768px) {
+    .rectangles-container {
+        flex-direction: column;
+    }
+}
