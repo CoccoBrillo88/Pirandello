@@ -1,12 +1,8 @@
-function toggleSection(id) {
-    let sections = document.querySelectorAll(".content");
+window.addEventListener("load", () => {
+    const cards = document.getElementById("cards");
 
-    sections.forEach(section => {
-        if (section.id === id) {
-            section.style.display = 
-                section.style.display === "block" ? "none" : "block";
-        } else {
-            section.style.display = "none";
-        }
-    });
-}
+    setTimeout(() => {
+        cards.classList.remove("hidden");
+        cards.classList.add("show");
+    }, 800);
+});
