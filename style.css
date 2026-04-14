@@ -1,135 +1,161 @@
-/* Importazione di un font leggibile e moderno */
 @import url('https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
 
-/* Regole base e Sfondo con opacità al 60% */
 body {
     margin: 0;
-    padding: 0;
+    padding: 20px;
     font-family: 'Open Sans', sans-serif;
     color: #333;
-    position: relative;
-    background-color: #F5F5DC; /* Beige */
+    background-color: #F5F5DC; /* Beige di base */
 }
 
-/* Sfondo applicato con uno pseudo-elemento per gestire perfettamente l'opacità al 60% */
+/* Sfondo con opacità 60% */
 body::before {
     content: "";
     position: fixed;
-    top: 0; 
-    left: 0;
-    width: 100vw; 
-    height: 100vh;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
     background-image: url('Luigi-Pirandello-768x1024.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-    opacity: 0.6; /* Sfondo a 60 di opacità */
+    opacity: 0.6;
     z-index: -1;
 }
 
-/* Header - Introduzione */
-.intro-section {
-    background-color: rgba(255, 255, 255, 0.9); /* Bianco leggermente trasparente */
-    padding: 30px;
-    margin: 40px auto;
-    max-width: 800px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    border-top: 5px solid #DAA520; /* Giallo oro */
+.layout-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
-.intro-section h1 {
+/* --- SEZIONE SUPERIORE --- */
+.top-section {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.intro-box, .image-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 3px solid #333; /* Riquadro stile wireframe */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.intro-box {
+    flex: 1;
+    border-top: 6px solid #DAA520; /* Tocco Giallo oro */
+}
+
+.intro-box h2 {
     font-family: 'Georgia', serif;
     color: #B87333; /* Arancione rame */
     margin-top: 0;
 }
 
-/* Contenitore principale */
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* I 3 Rettangoli Cliccabili */
-.rectangles-container {
+.image-box {
+    flex: 2;
     display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    margin-bottom: 40px;
+    justify-content: center;
+    align-items: center;
+    border-top: 6px solid #B87333;
 }
 
-.rect-btn {
-    flex: 1;
-    background-color: #B87333; /* Arancione Rame */
-    color: #FFFFFF;
-    border: none;
-    padding: 20px 10px;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-}
-
-.rect-btn:hover {
-    background-color: #DAA520; /* Giallo Oro */
-    transform: translateY(-3px);
-}
-
-/* Sezioni degli appunti */
-.content-section {
-    background-color: #F5F5DC; /* Beige */
-    border: 2px solid #DAA520; /* Bordo Giallo Oro */
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-    margin-bottom: 40px;
-    animation: fadeIn 0.5s ease-in-out;
-}
-
-.content-section.hidden {
-    display: none;
-}
-
-.content-section h2 {
-    font-family: 'Georgia', serif;
-    color: #B87333;
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 25px;
-}
-
-.content-section img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto 25px auto;
-    border-radius: 8px;
+.image-box img {
+    max-height: 400px;
+    border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.content-section ul {
-    line-height: 1.8;
+/* --- SEZIONE INFERIORE --- */
+.bottom-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.buttons-row {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.oval-btn {
+    flex: 1;
+    background-color: #B87333; /* Arancione rame */
+    color: #FFF;
+    border: 2px solid #333;
+    padding: 15px 10px;
     font-size: 16px;
+    font-weight: bold;
+    border-radius: 50px; /* Forma Ovale come da disegno */
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.oval-btn:hover, .oval-btn.active {
+    background-color: #DAA520; /* Giallo oro al passaggio/attivo */
+    transform: scale(1.02);
+}
+
+.columns-row {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.content-col {
+    flex: 1;
+    border: 3px solid #333;
+    border-radius: 12px;
+    min-height: 500px;
+    background-color: rgba(245, 245, 220, 0.4); /* Beige molto trasparente di default */
+    padding: 20px;
+    transition: background-color 0.4s ease;
+}
+
+/* Nasconde il testo finché non viene attivato */
+.inner-content {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease;
+}
+
+.content-col h3 {
+    font-family: 'Georgia', serif;
+    color: #B87333;
+    text-align: center;
+}
+
+.content-col img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.content-col ul {
     padding-left: 20px;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
-.content-section ul li {
-    margin-bottom: 12px;
+/* CLASSI ATTIVE (Aggiunte via JS) */
+.content-col.active {
+    background-color: rgba(255, 255, 255, 0.95); /* Diventa bianco coprente */
+    border-color: #DAA520;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* Animazione di entrata */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+.content-col.active .inner-content {
+    opacity: 1;
+    visibility: visible;
 }
 
-/* Responsive design per schermi piccoli */
-@media (max-width: 768px) {
-    .rectangles-container {
+/* Responsività */
+@media (max-width: 900px) {
+    .top-section, .buttons-row, .columns-row {
         flex-direction: column;
     }
 }
