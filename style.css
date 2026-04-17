@@ -1,9 +1,6 @@
-/* VARIABILI COLORI */
 :root {
-    --beige: #F5F1E9;
     --gold: #C9A646;
     --dark: #2E2A26;
-    --soft: #7A6F65;
 }
 
 /* RESET */
@@ -13,30 +10,27 @@
     box-sizing:border-box;
 }
 
-/* SFONDO MODERNO */
+/* SFONDO NUOVO (VISIBILE!) */
 body {
     font-family: 'Libre Baskerville', serif;
     color: var(--dark);
 
     background:
-        linear-gradient(
-            rgba(245, 241, 233, 0.96),
-            rgba(245, 241, 233, 0.96)
-        ),
-        radial-gradient(circle at top left, #f3e6c9, transparent 40%),
-        radial-gradient(circle at bottom right, #e8d9a8, transparent 40%);
+        radial-gradient(circle at 20% 20%, rgba(201,166,70,0.25), transparent 40%),
+        radial-gradient(circle at 80% 80%, rgba(201,166,70,0.15), transparent 40%),
+        linear-gradient(135deg, #f7f3ea, #efe7d6);
 }
 
-/* CONTENITORE */
+/* CONTAINER */
 .container {
-    width: 1100px;
+    width:1100px;
     margin:auto;
 }
 
 /* HERO */
 .hero {
     text-align:center;
-    padding:70px 0 30px;
+    padding:60px 0;
 }
 
 .hero h1 {
@@ -47,7 +41,6 @@ body {
 
 .hero p {
     font-size:20px;
-    color: var(--soft);
 }
 
 /* GRID */
@@ -59,77 +52,60 @@ body {
     align-items:center;
 }
 
-/* REVERSE */
 .reverse {
     direction: rtl;
 }
-
 .reverse .text {
     direction:ltr;
 }
 
-/* IMMAGINI */
 img {
     width:100%;
     border-radius:12px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.12);
 }
 
 /* TITOLI */
 h2 {
     font-family: 'Cormorant Garamond', serif;
+    font-size:34px;
     color: var(--gold);
     margin-bottom:10px;
-    font-size:34px;
 }
 
 /* TESTO */
 p {
-    margin-bottom:10px;
     font-size:17px;
-    line-height:1.6;
-}
-
-/* SEZIONE CARDS */
-.card-section {
-    margin:40px 0;
+    margin-bottom:8px;
 }
 
 /* CARDS */
 .cards {
     display:flex;
-    gap:15px;
-    margin-top:10px;
+    gap:20px;
 }
 
 .card {
-    background:white;
-    padding:18px;
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(8px);
+    padding:20px;
     border-radius:12px;
     flex:1;
-    box-shadow:0 8px 18px rgba(0,0,0,0.06);
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
+    border:1px solid rgba(201,166,70,0.3);
 }
 
 .card h3 {
-    color: var(--gold);
-    margin-bottom:6px;
     font-family: 'Cormorant Garamond', serif;
+    font-size:22px;
+    color: var(--gold);
 }
 
-/* TESTI SPECIALI */
+/* EXTRA */
 .highlight {
-    margin-top:10px;
     color: var(--gold);
-    font-weight:500;
+    margin-top:10px;
 }
 
 .example {
-    margin-top:15px;
+    margin-top:10px;
     font-style:italic;
-    color: var(--soft);
 }
