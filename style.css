@@ -1,6 +1,7 @@
 :root {
     --gold: #C9A646;
     --dark: #2E2A26;
+    --soft: #6f665c;
 }
 
 /* RESET */
@@ -10,45 +11,47 @@
     box-sizing:border-box;
 }
 
-/* SFONDO NUOVO (VISIBILE!) */
+/* SFONDO OPACO */
 body {
     font-family: 'Libre Baskerville', serif;
     color: var(--dark);
 
     background:
-        radial-gradient(circle at 20% 20%, rgba(201,166,70,0.25), transparent 40%),
-        radial-gradient(circle at 80% 80%, rgba(201,166,70,0.15), transparent 40%),
-        linear-gradient(135deg, #f7f3ea, #efe7d6);
+        linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)),
+        radial-gradient(circle at top, #f3e6c9, transparent 50%);
 }
 
 /* CONTAINER */
 .container {
     width:1100px;
     margin:auto;
+    padding-bottom:40px;
 }
 
 /* HERO */
 .hero {
     text-align:center;
-    padding:60px 0;
+    padding:80px 0 40px;
 }
 
 .hero h1 {
     font-family: 'Cormorant Garamond', serif;
-    font-size:70px;
+    font-size:72px;
     color: var(--gold);
+    margin-bottom:10px;
 }
 
 .hero p {
     font-size:20px;
+    color: var(--soft);
 }
 
 /* GRID */
 .grid {
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:30px;
-    margin:40px 0;
+    gap:50px;
+    margin:60px 0;
     align-items:center;
 }
 
@@ -61,51 +64,59 @@ body {
 
 img {
     width:100%;
-    border-radius:12px;
+    border-radius:14px;
 }
 
 /* TITOLI */
 h2 {
     font-family: 'Cormorant Garamond', serif;
-    font-size:34px;
+    font-size:36px;
     color: var(--gold);
-    margin-bottom:10px;
+    margin-bottom:20px;
 }
 
 /* TESTO */
 p {
-    font-size:17px;
-    margin-bottom:8px;
+    font-size:18px;
+    line-height:1.7;
+    margin-bottom:14px;
 }
 
 /* CARDS */
+.card-section {
+    margin:60px 0;
+}
+
 .cards {
     display:flex;
-    gap:20px;
+    gap:25px;
+    margin-top:20px;
 }
 
 .card {
-    background: rgba(255,255,255,0.7);
-    backdrop-filter: blur(8px);
-    padding:20px;
-    border-radius:12px;
+    background: rgba(255,255,255,0.85);
+    padding:25px;
+    border-radius:14px;
     flex:1;
-    border:1px solid rgba(201,166,70,0.3);
+    border:1px solid rgba(201,166,70,0.2);
 }
 
 .card h3 {
     font-family: 'Cormorant Garamond', serif;
-    font-size:22px;
+    font-size:24px;
     color: var(--gold);
+    margin-bottom:10px;
 }
 
 /* EXTRA */
 .highlight {
+    margin-top:20px;
     color: var(--gold);
-    margin-top:10px;
+    font-weight:500;
 }
 
 .example {
-    margin-top:10px;
+    margin-top:20px;
     font-style:italic;
+    color: var(--soft);
 }
