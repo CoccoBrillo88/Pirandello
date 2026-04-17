@@ -1,22 +1,17 @@
-// Animazione semplice in entrata
+const sections = document.querySelectorAll(".grid, .card-section");
 
-const elements = document.querySelectorAll(".grid, .card-section");
-
-window.addEventListener("scroll", () => {
-    elements.forEach(el => {
-        const position = el.getBoundingClientRect().top;
-        const screen = window.innerHeight;
-
-        if (position < screen - 100) {
-            el.style.opacity = 1;
-            el.style.transform = "translateY(0)";
-        }
-    });
+sections.forEach(sec => {
+    sec.style.opacity = 0;
+    sec.style.transform = "translateY(30px)";
+    sec.style.transition = "all 0.6s ease";
 });
 
-// stato iniziale
-elements.forEach(el => {
-    el.style.opacity = 0;
-    el.style.transform = "translateY(40px)";
-    el.style.transition = "all 0.6s ease";
+window.addEventListener("scroll", () => {
+    sections.forEach(sec => {
+        const pos = sec.getBoundingClientRect().top;
+        if (pos < window.innerHeight - 80) {
+            sec.style.opacity = 1;
+            sec.style.transform = "translateY(0)";
+        }
+    });
 });
