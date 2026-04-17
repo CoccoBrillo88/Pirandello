@@ -1,8 +1,8 @@
 :root {
     --beige: #F5F1E9;
-    --gold: #C6A75E;
-    --dark: #3A3228;
-    --light: #8A7F73;
+    --gold: #C9A646;
+    --dark: #2E2A26;
+    --soft: #7A6F65;
 }
 
 * {
@@ -12,39 +12,39 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
     background: var(--beige);
     color: var(--dark);
+    font-family: 'Libre Baskerville', serif;
 }
 
 .container {
     width: 1100px;
-    margin: auto;
+    margin:auto;
 }
 
 /* HERO */
 .hero {
     text-align:center;
-    padding:80px 0 40px;
+    padding:70px 0 30px;
 }
 
 .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size:60px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size:70px;
     color: var(--gold);
 }
 
 .hero p {
     font-size:20px;
-    color: var(--light);
+    color: var(--soft);
 }
 
 /* GRID */
 .grid {
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:40px;
-    margin:50px 0;
+    gap:30px;
+    margin:40px 0;
     align-items:center;
 }
 
@@ -53,60 +53,61 @@ body {
 }
 
 .reverse .text {
-    direction: ltr;
+    direction:ltr;
 }
 
 img {
     width:100%;
     border-radius:12px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
 }
 
 /* TEXT */
 h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     color: var(--gold);
-    margin-bottom:15px;
+    margin-bottom:10px;
+    font-size:32px;
 }
 
 p {
-    margin-bottom:10px;
-    line-height:1.6;
+    margin-bottom:8px;
+    font-size:17px;
+    line-height:1.5;
 }
 
 /* CARDS */
 .card-section {
-    margin:60px 0;
+    margin:40px 0;
 }
 
 .cards {
     display:flex;
-    gap:20px;
-    margin:20px 0;
+    gap:15px;
 }
 
 .card {
     background:white;
-    padding:20px;
-    border-radius:12px;
+    padding:18px;
+    border-radius:10px;
     flex:1;
-    box-shadow:0 8px 20px rgba(0,0,0,0.05);
+    box-shadow:0 6px 15px rgba(0,0,0,0.05);
 }
 
 .card h3 {
     color: var(--gold);
-    margin-bottom:10px;
+    margin-bottom:6px;
 }
 
-/* HIGHLIGHT */
+/* EXTRA */
 .highlight {
-    margin-top:15px;
-    font-weight:500;
+    margin-top:10px;
     color: var(--gold);
+    font-weight:500;
 }
 
 .example {
-    margin-top:20px;
+    margin-top:15px;
     font-style:italic;
-    color: var(--light);
+    color: var(--soft);
 }
