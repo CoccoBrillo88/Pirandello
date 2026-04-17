@@ -1,34 +1,25 @@
 const sections = document.querySelectorAll(".grid, .card-section");
 
 /* stato iniziale */
-sections.forEach((sec, index) => {
-    if (index === 0) {
-        // PRIMA SEZIONE VISIBILE SUBITO
-        sec.style.opacity = 1;
-        sec.style.transform = "translateY(0)";
-    } else {
-        sec.style.opacity = 0;
-        sec.style.transform = "translateY(40px)";
-    }
-
-    sec.style.transition = "all 0.7s ease";
+sections.forEach(sec => {
+    sec.style.opacity = 0;
+    sec.style.transform = "translateY(40px)";
+    sec.style.transition = "all 0.6s ease";
 });
 
-/* funzione animazione */
-function revealOnScroll() {
+/* funzione */
+function reveal() {
     sections.forEach(sec => {
         const pos = sec.getBoundingClientRect().top;
-        const trigger = window.innerHeight - 100;
-
-        if (pos < trigger) {
+        if (pos < window.innerHeight - 80) {
             sec.style.opacity = 1;
             sec.style.transform = "translateY(0)";
         }
     });
 }
 
-/* IMPORTANTE: attiva subito */
-window.addEventListener("load", revealOnScroll);
+/* subito visibile */
+window.onload = reveal;
 
 /* scroll */
-window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("scroll", reveal);
